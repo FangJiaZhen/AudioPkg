@@ -85,3 +85,8 @@
     MSFT:RELEASE_*_*_CC_FLAGS   = -D MDEPKG_NDEBUG -D DISABLE_NEW_DEPRECATED_INTERFACES
     XCODE:DEBUG_*_*_CC_FLAGS    = -D DISABLE_NEW_DEPRECATED_INTERFACES
     XCODE:RELEASE_*_*_CC_FLAGS  = -D MDEPKG_NDEBUG -D DISABLE_NEW_DEPRECATED_INTERFACES
+    MSFT:*_*_*_CC_FLAGS = /wd4244 # Felix AudioPkg\Application\BootChimeCfg\BootChimeCfg.c(415): warning C4244: 'function': conversion from 'UINTN' to 'UINT8', possible loss of data
+    MSFT:*_*_*_CC_FLAGS = /wd4819 # Felix AudioPkg\Include\Library/HdaVerbs.h: warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+    MSFT:*_*_*_CC_FLAGS = /wd4054 # Felix AudioPkg\Platform\AudioDxe\HdaCodec\HdaCodecAudioIo.c(553): warning C4054: 'type cast': from function pointer 'EFI_AUDIO_IO_CALLBACK' to data pointer 'void *'
+    MSFT:*_*_*_CC_FLAGS = /wd4055 # Felix AudioPkg\Platform\AudioDxe\HdaCodec\HdaCodecAudioIo.c(39): warning C4055: 'type cast': from data pointer 'void *' to function pointer 'EFI_AUDIO_IO_CALLBACK'
+    MSFT:*_*_*_CC_FLAGS = /wd4152 # Felix AudioPkg\Platform\AudioDxe\HdaCodec\HdaCodecAudioIo.c(553): warning C4152: nonstandard extension, function/data pointer conversion in expression
